@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5001";
 
 export const request = async (
   url,
@@ -29,7 +29,10 @@ export const request = async (
           method,
           body: JSON.stringify({ ...body }),
         });
-        if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
+        if (res.status !== 200 && res.status !== 201) {
+          console.log(res.json());
+          throw new Error("ERROR");
+        }
         data = await res.json();
       }
       return data;
@@ -40,7 +43,10 @@ export const request = async (
         method,
         body: JSON.stringify(body),
       });
-      if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
+      if (res.status !== 200 && res.status !== 201) {
+        console.log(res.json());
+        throw new Error("ERROR");
+      }
       data = await res.json();
       return data;
 
