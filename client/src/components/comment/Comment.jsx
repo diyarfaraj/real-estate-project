@@ -30,7 +30,7 @@ const Comment = ({ comment, setComments }) => {
           <img
             src={
               comment?.author?.profileImg
-                ? `http://localhost:5001/images/${comment?.author?.profileImg}`
+                ? `https://realestate-backend-km53.onrender.com/images/${comment?.author?.profileImg}`
                 : person
             }
           />

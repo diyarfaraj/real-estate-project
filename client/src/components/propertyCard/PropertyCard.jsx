@@ -13,7 +13,10 @@ const PropertyCard = ({ property }) => {
         to={`/propertyDetail/${property._id}`}
         className={classes.imgContainer}
       >
-        <img src={`http://localhost:5001/images/${property?.img}`} alt="" />
+        <img
+          src={`https://realestate-backend-km53.onrender.com/images/${property?.img}`}
+          alt=""
+        />
       </Link>
       <div className={classes.details}>
         <div className={classes.priceAndOwner}>
@@ -21,7 +24,7 @@ const PropertyCard = ({ property }) => {
           <img
             src={
               ownerProfileImg
-                ? `http://localhost:5001/images/${ownerProfileImg}`
+                ? `https://realestate-backend-km53.onrender.com/images/${ownerProfileImg}`
                 : person
             }
             className={classes.owner}

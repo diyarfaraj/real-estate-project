@@ -42,13 +42,16 @@ const Signup = () => {
         formData.append("filename", filename);
         formData.append("image", photo);
 
-        await fetch(`http://localhost:5001/upload/image`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          method: "POST",
-          body: formData,
-        });
+        await fetch(
+          `https://realestate-backend-km53.onrender.com/upload/image`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            method: "POST",
+            body: formData,
+          }
+        );
       } else {
         setEmptyFields(true);
         setTimeout(() => {

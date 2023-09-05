@@ -147,7 +147,9 @@ const PropertyDetail = () => {
       </h3>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={`http://localhost:5001/images/${propertyDetail?.img}`} />
+          <img
+            src={`https://realestate-backend-km53.onrender.com/images/${propertyDetail?.img}`}
+          />
         </div>
         <div className={classes.right}>
           <h3 className={classes.title}>
@@ -179,7 +181,7 @@ const PropertyDetail = () => {
                 Owner:{" "}
                 {propertyDetail?.currentOwner?.profileImg ? (
                   <img
-                    src={`http://localhost:5001/images/${propertyDetail?.currentOwner?.profileImg}`}
+                    src={`https://realestate-backend-km53.onrender.com/images/${propertyDetail?.currentOwner?.profileImg}`}
                     className={classes.owner}
                   />
                 ) : (
@@ -290,7 +292,9 @@ const PropertyDetail = () => {
         )}
         {user?._id != null && (
           <div className={classes.commentInput}>
-            <img src={`http://localhost:5001/images/${user?.profileImg}`} />
+            <img
+              src={`https://realestate-backend-km53.onrender.com/images/${user?.profileImg}`}
+            />
             <input
               value={commentText}
               type="text"

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5001";
+const BASE_URL = "https://realestate-backend-km53.onrender.com";
 
 export const request = async (
   url,

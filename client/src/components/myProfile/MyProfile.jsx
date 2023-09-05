@@ -137,7 +137,7 @@ const MyProfile = () => {
             className={classes.userProfileImg}
             src={
               user?.profileImg
-                ? `http://localhost:5001/images/${user?.profileImg}`
+                ? `https://realestate-backend-km53.onrender.com/images/${user?.profileImg}`
                 : person
             }
           />
@@ -187,7 +187,7 @@ const MyProfile = () => {
                         className={classes.imgContainer}
                       >
                         <img
-                          src={`http://localhost:5001/images/${listedProperty?.img}`}
+                          src={`https://realestate-backend-km53.onrender.com/images/${listedProperty?.img}`}
                           alt=""
                         />
                       </Link>
@@ -199,7 +199,7 @@ const MyProfile = () => {
                           <img
                             src={
                               user?.profileImg
-                                ? `http://localhost:5001/images/${user?.profileImg}`
+                                ? `https://realestate-backend-km53.onrender.com/images/${user?.profileImg}`
                                 : person
                             }
                             className={classes.owner}
@@ -262,7 +262,7 @@ const MyProfile = () => {
                         className={classes.imgContainer}
                       >
                         <img
-                          src={`http://localhost:5001/images/${bookmarkedProperty?.img}`}
+                          src={`https://realestate-backend-km53.onrender.com/images/${bookmarkedProperty?.img}`}
                           alt=""
                         />
                       </Link>
