@@ -131,6 +131,8 @@ const YachtDetails = () => {
     }
   };
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   return (
     <div className={classes.container}>
       <h3
@@ -145,9 +147,7 @@ const YachtDetails = () => {
       </h3>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img
-            src={`https://realestate-backend-km53.onrender.com/images/${yacht?.img}`}
-          />
+          <img src={`${backendUrl}/images/${yacht?.img}`} />
         </div>
         <div className={classes.right}>
           <div className={classes.top}>
@@ -251,9 +251,7 @@ const YachtDetails = () => {
         <div className={classes.commentSection}>
           {/* comment input */}
           <div className={classes.commentInput}>
-            <img
-              src={`https://realestate-backend-km53.onrender.com/images/${user?.profileImg}`}
-            />
+            <img src={`${backendUrl}/images/${user?.profileImg}`} />
             <input
               value={commentText}
               type="text"

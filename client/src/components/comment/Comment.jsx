@@ -23,6 +23,8 @@ const Comment = ({ comment, setComments }) => {
     }
   };
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
@@ -30,7 +32,7 @@ const Comment = ({ comment, setComments }) => {
           <img
             src={
               comment?.author?.profileImg
-                ? `https://realestate-backend-km53.onrender.com/images/${comment?.author?.profileImg}`
+                ? `${backendUrl}/images/${comment?.author?.profileImg}`
                 : person
             }
           />

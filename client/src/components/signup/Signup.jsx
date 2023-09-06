@@ -42,16 +42,13 @@ const Signup = () => {
         formData.append("filename", filename);
         formData.append("image", photo);
 
-        await fetch(
-          `https://realestate-backend-km53.onrender.com/upload/image`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-            method: "POST",
-            body: formData,
-          }
-        );
+        await fetch(`${backendUrl}/upload/image`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          method: "POST",
+          body: formData,
+        });
       } else {
         setEmptyFields(true);
         setTimeout(() => {
@@ -79,6 +76,8 @@ const Signup = () => {
       console.error(error);
     }
   };
+
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   return (
     <div className={classes.container}>

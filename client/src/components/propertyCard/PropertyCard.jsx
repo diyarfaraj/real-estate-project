@@ -7,16 +7,15 @@ import person from "../../assets/person.jpg";
 const PropertyCard = ({ property }) => {
   const ownerProfileImg = property?.currentOwner?.profileImg;
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   return (
     <div key={property._id} className={classes.property}>
       <Link
         to={`/propertyDetail/${property._id}`}
         className={classes.imgContainer}
       >
-        <img
-          src={`https://realestate-backend-km53.onrender.com/images/${property?.img}`}
-          alt=""
-        />
+        <img src={`${backendUrl}/images/${property?.img}`} alt="" />
       </Link>
       <div className={classes.details}>
         <div className={classes.priceAndOwner}>
@@ -24,7 +23,7 @@ const PropertyCard = ({ property }) => {
           <img
             src={
               ownerProfileImg
-                ? `https://realestate-backend-km53.onrender.com/images/${ownerProfileImg}`
+                ? `${backendUrl}/images/${ownerProfileImg}`
                 : person
             }
             className={classes.owner}

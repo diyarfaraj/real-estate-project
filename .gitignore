@@ -47,13 +47,13 @@ node_modules/
 npm-debug.log*
 
 # backend specific
-backend-folder/.env
-backend-folder/node_modules/
+backend/.env
+backend/node_modules/
 
 # client specific
-client-folder/.env
-client-folder/node_modules/
-client-folder/build/
+client/.env
+client/node_modules/
+client/build/
 
 # Misc
 *.swp

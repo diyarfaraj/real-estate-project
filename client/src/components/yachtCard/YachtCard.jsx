@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { BsFillPersonFill } from "react-icons/bs";
 
 const YachtCard = ({ yacht }) => {
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   return (
     <Link to={`/yacht/${yacht._id}`} className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.imgContainer}>
-          <img
-            src={`https://realestate-backend-km53.onrender.com/images/${yacht.img}`}
-          />
+          <img src={`${backendUrl}/images/${yacht.img}`} />
         </div>
         <h3 className={classes.title}>{yacht.title}</h3>
         <div className={classes.priceAndMaxPassengers}>

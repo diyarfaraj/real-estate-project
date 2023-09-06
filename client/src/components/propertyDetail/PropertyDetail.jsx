@@ -133,6 +133,8 @@ const PropertyDetail = () => {
     }
   };
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   return (
     <div className={classes.container}>
       <h3
@@ -147,9 +149,7 @@ const PropertyDetail = () => {
       </h3>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img
-            src={`https://realestate-backend-km53.onrender.com/images/${propertyDetail?.img}`}
-          />
+          <img src={`${backendUrl}/images/${propertyDetail?.img}`} />
         </div>
         <div className={classes.right}>
           <h3 className={classes.title}>
@@ -181,7 +181,7 @@ const PropertyDetail = () => {
                 Owner:{" "}
                 {propertyDetail?.currentOwner?.profileImg ? (
                   <img
-                    src={`https://realestate-backend-km53.onrender.com/images/${propertyDetail?.currentOwner?.profileImg}`}
+                    src={`${backendUrl}/images/${propertyDetail?.currentOwner?.profileImg}`}
                     className={classes.owner}
                   />
                 ) : (
@@ -292,9 +292,7 @@ const PropertyDetail = () => {
         )}
         {user?._id != null && (
           <div className={classes.commentInput}>
-            <img
-              src={`https://realestate-backend-km53.onrender.com/images/${user?.profileImg}`}
-            />
+            <img src={`${backendUrl}/images/${user?.profileImg}`} />
             <input
               value={commentText}
               type="text"

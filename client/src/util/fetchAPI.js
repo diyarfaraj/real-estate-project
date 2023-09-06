@@ -1,4 +1,6 @@
-const BASE_URL = "https://realestate-backend-km53.onrender.com";
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+const BASE_URL = `${backendUrl}`;
 
 export const request = async (
   url,
