@@ -142,6 +142,7 @@ const MyProfile = () => {
                 ? `${backendUrl}/images/${user?.profileImg}`
                 : person
             }
+            alt=""
           />
           <div className={classes.userData}>
             <h3>{user?.username}</h3>
@@ -205,6 +206,7 @@ const MyProfile = () => {
                                 : person
                             }
                             className={classes.owner}
+                            alt=""
                           />
                         </div>
                         <div className={classes.moreDetails}>
@@ -273,7 +275,7 @@ const MyProfile = () => {
                           <span className={classes.price}>
                             $ {bookmarkedProperty.price}
                           </span>
-                          <img src={person} className={classes.owner} />
+                          <img src={person} className={classes.owner} alt="" />
                         </div>
                         <div className={classes.moreDetails}>
                           <span>

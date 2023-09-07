@@ -27,6 +27,7 @@ const PropertyCard = ({ property }) => {
                 : person
             }
             className={classes.owner}
+            alt=""
           />
         </div>
         <div className={classes.moreDetails}>

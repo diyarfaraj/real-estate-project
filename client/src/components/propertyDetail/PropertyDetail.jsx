@@ -149,7 +149,7 @@ const PropertyDetail = () => {
       </h3>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={`${backendUrl}/images/${propertyDetail?.img}`} />
+          <img src={`${backendUrl}/images/${propertyDetail?.img}`} alt="" />
         </div>
         <div className={classes.right}>
           <h3 className={classes.title}>
@@ -183,9 +183,10 @@ const PropertyDetail = () => {
                   <img
                     src={`${backendUrl}/images/${propertyDetail?.currentOwner?.profileImg}`}
                     className={classes.owner}
+                    alt=""
                   />
                 ) : (
-                  <img src={person} className={classes.owner} />
+                  <img src={person} className={classes.owner} alt="" />
                 )}
               </span>
             </div>
@@ -292,7 +293,7 @@ const PropertyDetail = () => {
         )}
         {user?._id != null && (
           <div className={classes.commentInput}>
-            <img src={`${backendUrl}/images/${user?.profileImg}`} />
+            <img src={`${backendUrl}/images/${user?.profileImg}`} alt="" />
             <input
               value={commentText}
               type="text"

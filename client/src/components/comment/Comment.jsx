@@ -35,6 +35,7 @@ const Comment = ({ comment, setComments }) => {
                 ? `${backendUrl}/images/${comment?.author?.profileImg}`
                 : person
             }
+            alt=""
           />
           <div className={classes.userData}>
             <h4>{comment?.author?.username}</h4>

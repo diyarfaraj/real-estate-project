@@ -147,7 +147,7 @@ const YachtDetails = () => {
       </h3>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={`${backendUrl}/images/${yacht?.img}`} />
+          <img src={`${backendUrl}/images/${yacht?.img}`} alt="" />
         </div>
         <div className={classes.right}>
           <div className={classes.top}>
@@ -251,7 +251,7 @@ const YachtDetails = () => {
         <div className={classes.commentSection}>
           {/* comment input */}
           <div className={classes.commentInput}>
-            <img src={`${backendUrl}/images/${user?.profileImg}`} />
+            <img src={`${backendUrl}/images/${user?.profileImg}`} alt="" />
             <input
               value={commentText}
               type="text"
