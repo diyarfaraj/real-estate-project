@@ -25,21 +25,29 @@ const MyProfile = () => {
   useEffect(() => {
     const fetchListedProperties = async () => {
       try {
+        console.log("diyar token", token);
+        console.log("diyar user", user);
         const options = {
-          Authorization: `Bearer ${token}`,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         };
         const data = await request(
           `/property/find/my-properties`,
           "GET",
           options
         );
+
+        console.log("diyar data", data);
+
         setListedProperties(data);
       } catch (error) {
         console.log(error);
+        setError(error);
       }
     };
     fetchListedProperties();
-  }, []);
+  }, [token]);
 
   useEffect(() => {
     const fetchListedYachts = async () => {

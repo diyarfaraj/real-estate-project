@@ -14,6 +14,10 @@ export const request = async (
   switch (method) {
     case "GET":
       res = await fetch(BASE_URL + url, { headers });
+
+      console.log("res diyar ", res.status, res.statusText);
+      console.log("res text ", await res.text()); // or res.json()
+
       if (res.status !== 200 && res.status !== 201) throw new Error("ERROR");
       data = await res.json();
       return data;
