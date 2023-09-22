@@ -25,8 +25,6 @@ const MyProfile = () => {
   useEffect(() => {
     const fetchListedProperties = async () => {
       try {
-        console.log("diyar token", token);
-        console.log("diyar user", user);
         const options = {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,8 +35,6 @@ const MyProfile = () => {
           "GET",
           options
         );
-
-        console.log("diyar data", data);
 
         setListedProperties(data);
       } catch (error) {

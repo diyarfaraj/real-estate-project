@@ -68,7 +68,11 @@ propertyController.get("/find/types", async (req, res) => {
 // fetch my properties
 propertyController.get("/find/my-properties", verifyToken, async (req, res) => {
   try {
+    console.log("my props", req.body);
+
     const properties = await Property.find({ currentOwner: req.user.id });
+
+    console.log("my props", properties);
 
     return res.status(200).json(properties);
   } catch (error) {
