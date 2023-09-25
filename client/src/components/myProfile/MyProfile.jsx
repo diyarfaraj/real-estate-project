@@ -26,9 +26,7 @@ const MyProfile = () => {
     const fetchListedProperties = async () => {
       try {
         const options = {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          Authorization: `Bearer ${token}`,
         };
         const data = await request(
           `/property/find/my-properties`,
